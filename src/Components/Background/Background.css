@@ -1,0 +1,87 @@
+/* Slider container */
+.slider-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Slider item */
+.slider-item {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image inside the slider */
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the slide area without distortion */
+  display: block;
+}
+
+/* Text inside each slider */
+.slider-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%; /* Make sure text does not overflow */
+  box-sizing: border-box;
+}
+
+.slider-text h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.slider-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Slick slider styles */
+.slick-dots {
+  bottom: 20px;
+}
+
+.slick-dots li button:before {
+  color: white;
+  font-size: 16px;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 30px;
+  color: white;
+  z-index: 10;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  color: #007bff;
+}
+
+/* Responsiveness for small screens */
+@media (max-width: 768px) {
+  .slider-text h2 {
+    font-size: 2rem;
+  }
+
+  .slider-text p {
+    font-size: 1rem;
+  }
+
+  .slider-item {
+    height: 300px; /* Adjust height on smaller screens */
+  }
+  .slider-container{
+    margin-left: 19px;
+  }
+}

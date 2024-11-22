@@ -1,0 +1,174 @@
+/* Global Styling for Register Component */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #f4f3ff;
+  --btn-color: #646cff;
+  --dark-color: #242424;
+  --helper-color: #99b9ff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --highlight-color: #ff6347;
+}
+
+/* Button Hover Effect */
+.submitBtn:hover {
+  background-color: var(--highlight-color);
+  box-shadow: inset 0 0 0 0.2rem var(--bg-color);
+}
+
+/* Main Heading Style */
+.mainHeading {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--dark-color);
+  font-weight: 700;
+  position: relative;
+}
+
+.mainHeading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 3px;
+  background-color: var(--btn-color);
+}
+
+/* Registration Section */
+.sectionRegistration {
+  padding: 4rem 2rem;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure section takes full screen height */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.registrationForm {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-size: 1.1rem;
+  color: var(--dark-color);
+  margin-bottom: 8px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--dark-color);
+}
+
+input:focus {
+  border-color: var(--btn-color);
+  outline: none;
+}
+
+.regBtn .submitBtn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--btn-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.regBtn .submitBtn:hover {
+  background-color: var(--highlight-color);
+}
+
+/* Image Animation */
+.animatedImg {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 998px) {
+  .container {
+    flex-direction: column;
+    /* text-align: center; */
+    gap: 2rem;
+  }
+  .registrationImage {
+    width: 70%;
+  }
+
+  .registrationForm {
+    width: 80%; /* Make the form responsive */
+    max-width: 500px; /* Allow it to grow on smaller screens */
+  }
+
+  .submitBtn {
+    padding: 0.8rem; /* Adjust button padding */
+  }
+}
+
+@media (max-width: 798px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .container {
+    gap: 1rem; /* Reduce the gap between image and form */
+  }
+
+  .registrationForm {
+    width: 100%; /* Make the form take full width */
+  }
+
+  .registrationImage {
+    width: 100%;
+  }
+
+  .submitBtn {
+    font-size: 1rem; /* Adjust button font size */
+    padding: 1rem; /* Adjust padding */
+  }
+}

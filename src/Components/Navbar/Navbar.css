@@ -1,0 +1,142 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding-top: 80px; /* Prevents content from overlapping the navbar */
+}
+
+/* Floating Navbar */
+.navbar {
+  max-width: 90%; /* Keeps navbar slightly inset from the edges */
+  margin: 2px auto; /* Centers the navbar with space around it */
+  background-color: rgb(45, 151, 161); /* Slight transparency */
+  padding: 0.6rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 10px; /* Floats the navbar slightly below the top */
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-radius: 15px; /* Rounded corners */
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 10px #2bb4d4; Shadow and glow effect */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Logo and Company Name */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.company-name {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Navbar Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 5px #2bb4d4, 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Logo Hover Animation */
+.logo-container:hover .logo {
+  transform: scale(1.1);
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.3s ease;
+}
+
+/* Menu Toggle Animation */
+.menu-toggle.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Responsive for Smaller Screens */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(45, 151, 161, 0.9);
+    flex-direction: column;
+    width: 100%;
+    transform: translateY(-20px);
+    opacity: 0;
+    display: none;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}

@@ -1,0 +1,42 @@
+.title {
+    text-align: center;
+    color: #212EA0;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 50px 0 20px; /* Adjust margin for smaller screens */
+}
+
+.title h2 {
+    background-color: whitesmoke;
+    font-size: 28px; /* Reduce font size slightly for smaller screens */
+    color: #000F38;
+    margin-top: 5px;
+    text-transform: none;
+}
+
+/* Responsive styling for smartphones */
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 13px; /* Smaller font size */
+        margin: 40px 0 15px; /* Adjust margin for smaller screens */
+    }
+    .title h2 {
+        font-size: 24px; /* Reduce heading font size for smartphones */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 12px; /* Even smaller font size for very small screens */
+        /* margin: 30px 0 10px; */
+        margin-left: 19px;
+        margin-bottom: 30px;
+        margin-top: 70px;
+    
+            }
+    .title h2 {
+        font-size: 30px; /* Further reduce heading font size */
+        margin-top: 3px;
+    }
+}

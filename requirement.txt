@@ -1,0 +1,18 @@
+Guide for installation
+
+//for React install in "diabetic project" folder
+npm install axios@^1.7.7 cors@^2.8.5 react@^18.3.1 react-dom@^18.3.1 react-router-dom@^6.26.2 react-toastify@^10.0.6
+//How to run
+npm run dev
+
+
+//for Flast(Python) install in "diabetic project" folder
+pip install Flask flask-cors numpy pandas scikit-learn
+//How to run
+python src\server.py
+
+
+//for NodeJs install in "server" folder
+npm install cors@^2.8.5 dotenv@^16.4.5 express@^4.21.1 mongodb@^6.9.0 mongoose@^8.7.1
+//How to run
+node server.js
