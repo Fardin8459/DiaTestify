@@ -13,6 +13,6 @@ python src\server.py
 
 
 //for NodeJs install in "server" folder
-npm install cors@^2.8.5 dotenv@^16.4.5 express@^4.21.1 mongodb@^6.9.0 mongoose@^8.7.1
+npm install cors@^2.8.5 dotenv@^16.4.5 express@^4.21.1 mongodb@^6.9.0 mongoose@^8.7.1 zod
 //How to run
 node server.js

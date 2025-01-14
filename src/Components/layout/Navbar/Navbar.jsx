@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from "../../assets/abt-img/logo.png";
+import logo from "../../../assets/abt-img/logo.png";
 import './NavBar.css';
 
 const NavBar = () => {
@@ -28,6 +28,8 @@ const NavBar = () => {
       <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
+        <li><Link to="/NormalRanges">Normal Ranges</Link></li>
+        <li><Link to="/ChartDisplay">Analysis</Link></li>
         <li><Link to="/contact">Contact</Link></li>
         <li><Link to="/signUp">SignUp</Link></li>
         <li><Link to="/login">Login</Link></li>

@@ -1,0 +1,29 @@
+.chart-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.chart-wrapper {
+  margin-bottom: 40px;
+  position: relative;
+  height: 400px;
+}
+
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+
