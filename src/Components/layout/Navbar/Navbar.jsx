@@ -29,6 +29,7 @@ const NavBar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/NormalRanges">Normal Ranges</Link></li>
+        <li><Link to="/prescription">Prescription</Link></li>
         <li><Link to="/ChartDisplay">Analysis</Link></li>
         <li><Link to="/contact">Contact</Link></li>
         <li><Link to="/signUp">SignUp</Link></li>

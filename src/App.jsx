@@ -11,6 +11,7 @@ import Login from "./Components/Login/Login";
 import NormalRanges from "./Components/NormalRanges/NormalRanges";
 import ChartDisplay, { CorrelationHeatmap } from "./Components/ChartDisplay/ChartDisplay";
 import AppLayout from "./Components/layout/AppLayout";
+import YogaAsan from "./Components/Prescription/YogaAsan";
 // import {Logout} from "./Components/Logout/Logout"
 
 const App = () => {
@@ -41,6 +42,14 @@ const App = () => {
               <>
                 <Title title="Normal Ranges for Attributes" />
                 <NormalRanges />
+              </>
+            }
+          />
+          <Route
+            path="Prescription"
+            element={
+              <>
+                <YogaAsan />
               </>
             }
           />
